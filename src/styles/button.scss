@@ -1,0 +1,109 @@
+@import './variables.scss';
+@import './mixins.scss';
+button,
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+.tip {
+    font-size: 12px;
+}
+
+.link {
+    color: $clr-btn-color;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    color: $clr-white;
+    background: $clr-btn-bg-orange;
+    border-radius: 50px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    outline: none;
+    @include fadeOut;
+    &:hover {
+        @include fadeIn;
+        background-color: $clr-btn-bg-hover;
+        box-shadow: 0px 0px 5px $clr-brandColor;
+    }
+    &.primary {
+        background: #f9dad7;
+        color: $clr-brandColor;
+    }
+    &.plain {
+        background: #f7f6f6;
+        color: $clr-brandColor;
+        border: 1px solid #f9dad7;
+    }
+    &.primary.disable,
+    &.plan.disable,
+    &.disable {
+        opacity: 0.5;
+        box-shadow: unset;
+        cursor: auto;
+    }
+}
+
+.btn-left-r {
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    width: 100px;
+    border-radius: 18px 0 0 18px;
+    border: 1px solid #e3dfdf;
+    color: #808080;
+}
+
+.btn-right-r {
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    width: 100px;
+    border-radius: 0 18px 18px 0;
+    border: 1px solid #e3dfdf;
+    color: #808080;
+    margin-left: -1px;
+}
+
+//方形深色渐变红按钮
+.ry-btn-commit {
+    background-image: linear-gradient(90deg, #ff6a50 0%, #ff333f 100%);
+    border-radius: 5px;
+    display: inline-block;
+    border: 0;
+    color: #fff;
+    height: 28px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.ry-btn-commit:hover {
+    box-shadow: 0 0 5px #fd3f12;
+}
+
+//方形浅色淡红按钮
+.ry-btn-cancel {
+    background-color: #fff5f4;
+    border-radius: 5px;
+    display: inline-block;
+    border: 0;
+    /* color: #4169E1; */
+    color: #fd3f12;
+    height: 28px;
+    padding: 0 20px;
+    /* border: 1px solid #ccc; */
+    cursor: pointer;
+}
+
+.ry-btn-cancel:hover {
+    box-shadow: 0 0 5px #fd3f12;
+}

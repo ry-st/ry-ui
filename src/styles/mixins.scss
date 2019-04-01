@@ -1,0 +1,7 @@
+@mixin fadeIn() {
+  transition: all 0.3s ease-in;
+}
+
+@mixin fadeOut() {
+  transition: all 0.3s ease-out;
+}
